@@ -1,0 +1,402 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("background_3.jpg");
+    background-size: cover;
+}
+#header{
+    display: flex;
+    height: 100px;
+    margin-bottom: 0;
+    padding-right: 20px;
+}
+#logo-header{
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    width: 50%;
+}
+#info-header{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    width: 50%;
+}
+#info-header li {
+    margin-left: 10px;
+    width: 70px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: .5s;
+}
+
+#info-header li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, rgb(0, 208, 255), rgb(247, 0, 255));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease-in-out;
+}
+
+#info-header li:hover::after {
+    transform: scaleX(1);
+}
+
+#info-header p{
+    font-family: "Roboto";
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+#title{
+    font-family: "Lobster Two", sans-serif;
+    font-size: 25px;
+    color: white;
+}
+#title span{
+    font-family: "Arial";
+    font-size: 10px;
+    vertical-align: super; 
+}
+#icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    
+}
+#login{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 50px;
+    color: rgb(49, 47, 47);
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-image: linear-gradient(to right, rgb(0, 208, 255), rgb(247, 0, 255)) 1;
+    width: fit-content;
+}
+
+#login-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 60%;
+    margin-right: 30px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom right, rgb(227, 228, 228), rgb(255, 255, 255));
+    box-shadow: 5px 5px 10px rgba(78, 86, 60, 0.3);
+    z-index: 5;
+    transition: .5s ease-in-out;
+}
+#login-content.close{
+    transform: translateX(120%);
+}
+.login-content{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.information-text{
+    font-family: "Roboto";
+    font-size: 16px;
+    text-align: center;
+    color: rgb(205, 202, 202);
+}
+#login-data label{
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 18px;
+    margin-left: 5px;
+    color: rgb(49, 47, 47);
+}
+#login-data input{
+    background-color: transparent;
+    border: none;
+    border-style: none;
+    height: 30px;
+    font-size: 14px;
+    padding-left: 5px;
+    border-radius: 10px;
+    color: rgb(49, 47, 47);
+}
+#login-data input::placeholder{
+    color: rgb(182, 188, 189);
+}
+.input-info{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    border-style: solid;
+    margin-top: 10px;
+    border-width: 2px;
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 30px;
+    border-radius: 20px;
+    border-color: rgb(212, 209, 209);
+}
+
+#login-img{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: -60px;
+}
+#login-data button{
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background-image: url("buttonbackground.jpg");
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    transition: 1s;
+}
+
+#login-data button:hover{
+    background-image: none;
+    background-color: rgb(0, 183, 255);
+}
+#login-data button ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.input-container:not(#input-conteiner-id, #password-creation-conteiner){
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#page-background{
+    display: flex;
+    height: 100%;
+    overflow: hidden
+}
+#slides{
+    display: flex;
+    height: 100%;
+    
+}
+.img-slide {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 2s ease-in-out;
+    z-index: 1; 
+    opacity: 1;
+    mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+
+.img-slide.inactive {
+    opacity: 0;
+    z-index: 0;
+}
+#slide_1{
+    background-image: url("slide_1.jpg");
+    z-index: 1;
+}
+#slide_2{
+    background-image: url("slide_2.jpg");
+    z-index: 2;
+}
+#slide_3{
+    background-image: url("slide_3.jpg");
+    z-index: 3;
+}
+
+.symbols{
+    width: 30px;
+    height: 30px;
+    
+}
+.additional-info{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    margin-top: 30px;
+    color: rgb(1, 176, 240);
+    cursor: pointer;
+    transition: .5s;
+}
+.additional-info:hover{
+    color: rgb(175, 82, 192);
+}
+.social-accounts-text{
+    font-family: "Archivo Narrow", sans-serif;
+    color:rgb(207, 210, 211);
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+.final-text span{
+    color: rgb(1, 176, 240);
+    cursor: pointer;
+    transition: .5s;
+}
+.final-text span:hover{
+    color: rgb(175, 82, 192);
+}
+.final-text{
+    font-family: "Archivo Narrow", sans-serif;
+    color:rgb(207, 210, 211);
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+#social-medias ul{
+    display: flex;
+    margin-left: -10px;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+}
+#social-medias ul li{
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+    box-shadow: 5px 5px 10px rgba(78, 86, 60, 0.3);
+}
+#social-medias ul li img{
+    height: 30px;
+    width: 30px;
+}
+
+#error-phone{
+    grid-column: 2;
+    grid-row: 1;
+    display: none;
+    width: 30px;
+    height: 30px;
+    transform: translate(110px, -18px);
+    position: absolute;
+}
+
+#input-conteiner-id{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 5px;
+}
+
+#password-creation-conteiner{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 5px;
+}
+
+#password-creation-label{
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: -14px;
+  }
+
+#password{
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+  
+#error-password {
+    grid-column: 2;
+    grid-row: 1;
+    display: none;
+    width: 30px;
+    height: 30px;
+    transform: translate(74px, -24px);
+    position: absolute;
+  }
+
+#mobile-conteiner {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 2px;
+  }
+
+
+#tel {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  margin-top: -5px;
+}
+
+#signup-info{
+    margin-top: -10px;
+}
+
+.signup-final-text{
+    margin-bottom: 30px;
+}
+
+#password-strength {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    margin-top: 47px;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.strength-weak {
+    background-color: red;
+    width: 33%;
+}
+
+.strength-medium {
+    background-color: rgb(255, 208, 0);
+    width: 66%;
+}
+
+.strength-strong {
+    background-color: rgb(1, 202, 1);
+    width: 100%;
+}
