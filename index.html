@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style/index_syle.css">
+    <link rel="stylesheet" href="style/index-mobile.css">
+    <title>My Website</title>
+</head>
+<body>
+    <div id = "header">
+
+        <ul id = "logo-header">
+            <li id="icon-container">
+                <img id = "icon" src = "icons/blue-icon.png">
+            </li>
+            <li>
+                <h3 id = "title">MyCompany<span>™</span></h3>
+            </li>
+        </ul>       
+        
+        <ul id = "info-header">
+            <li>
+                <p class = "create-account">Sign Up</p>
+            </li>
+            <li>
+                <p>FAQ</p>
+            </li>
+            <li>
+                <p>About Us</p>
+            </li>
+        </ul>
+        
+    </div>
+    <div id="page-background">
+        <div id = "slides">
+            <div class = "img-slide" id = "slide_1" ></div>
+            <div class = "img-slide" id = "slide_2" ></div>
+            <div class = "img-slide" id = "slide_3" ></div>
+        </div>
+        <div id = "login-content">
+            <h1 id="login">Login</h1>
+            <div class = "login-content">
+                <form id = "login-data">
+                    <p class = "information-text">Welcome back! Please login to continue</p>
+                    <div class = "input-info">        
+                        <img class = "symbols" src = "icons/mail.png"> 
+                        <div class = "input-container">               
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        </div>
+                    </div>
+                    <div class = "input-info">    
+                        <img class = "symbols" src = "icons/lock.png"> 
+                        <div class = "input-container">                   
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+                    </div>
+                    <button type="submit">
+                        <ul>
+                            <li>
+                                <img id = "login-img" src = "icons/login.png">
+                            </li>
+                            <li>
+                                    LOGIN
+                            </li>
+                        </ul>
+                    </button>
+                    <div class = "additional-info">
+                        <p>Forgot password</p>
+                    </div>
+                    <div>
+                        <h3 class = "social-accounts-text">Or  Continue  with  Social  Accounts</h3>
+                    </div>
+                    <div id = "social-medias">
+                        <ul>
+                            <li>
+                                <img src = "icons/google.png">
+                            </li>
+                            <li>
+                                <img src = "icons/facebook.png">
+                            </li>
+                            <li>
+                                <img src = "icons/apple.png">
+                            </li>
+                            <li>
+                                <img src = "icons/twitter.png">
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class = "final-text">
+                           Don't  have  an  account?<span class = "create-account"> Create  Now</span>
+                        </h3>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.js"></script>
+    <script src = "Functions.js"></script>
+    <script src = "SlidesControl.js"></script>  
+    <script src = "SignUpAvailability.js"></script>  
+</body>
+</html>
